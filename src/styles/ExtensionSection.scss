@@ -1,0 +1,101 @@
+@import "./variables.scss";
+
+.extension-section {
+  background-color: $darkBackground;
+
+  .main-extension {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 0;
+
+    .stores {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 25px 0;
+
+      .store {
+        display: flex;
+        align-items: center;
+        justify-self: center;
+        border: 1px solid $darkText;
+        padding: 10px;
+        border-radius: 16px;
+        color: #fff;
+        margin: 0 10px;
+
+        .store-icon {
+          padding: 0 10px;
+          * {
+            height: 50px;
+          }
+        }
+
+        .store-text {
+          padding-right: 20px;
+          h5 {
+            font-weight: normal;
+            font-size: 13px;
+          }
+
+          h2 {
+            font-weight: bold;
+            font-size: 17px;
+          }
+        }
+      }
+    }
+
+    .reviews {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      padding: 0 20px;
+
+      .stars {
+        font-size: 25px;
+        padding-right: 10px;
+        display: flex;
+        align-items: center;
+      }
+
+      .chrom-title {
+        h4 {
+          font-weight: 200;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint_tablet) {
+  .extension-section {
+    .container {
+      .main-extension {
+        .stores {
+          display: block;
+
+          .store {
+            margin: 20px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint_phone) {
+  .extension-section {
+    .container {
+      .main-extension {
+        display: block;
+        .stores {
+          display: block;
+        }
+      }
+    }
+  }
+}

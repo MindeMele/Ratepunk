@@ -1,0 +1,68 @@
+@import "./variables.scss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: $notoFamily;
+}
+
+h1 {
+  font-family: $caveatFamily;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+:focus {
+  outline: none;
+  border: 0;
+}
+
+input {
+  outline: none;
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: $mainBlue;
+}
+
+.container {
+  padding: 0 20%;
+}
+
+@media (max-width: $breakpoint_laptop) {
+  .container {
+    padding: 0 10%;
+  }
+}
+
+@media (max-width: $breakpoint_laptop) {
+  .container {
+    padding: 0 5%;
+  }
+}
+
+.sections {
+  opacity: 1;
+  transition: ease-in-out 0.5s;
+}
+
+.sections-hide {
+  opacity: 0;
+  transition: ease-in-out 0.5s;
+}

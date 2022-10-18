@@ -1,0 +1,71 @@
+@import "./variables.scss";
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  height: 80px;
+  position: relative;
+
+  .nav-menu {
+    position: relative;
+
+    a {
+      margin: 0 2rem;
+      font-size: 17px;
+      color: $textColor;
+    }
+
+    a:hover {
+      color: $mainBlue;
+    }
+  }
+
+  .nav-btn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+  }
+
+  .nav-menu.active {
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+    padding: 0;
+  }
+}
+
+@media (max-width: $breakpoint_tablet) {
+  header {
+    .nav-menu {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 100px;
+      left: -100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+      a {
+        margin: 20px 0;
+      }
+    }
+
+    .nav-btn {
+      display: block;
+      z-index: 9999;
+    }
+
+    .nav-menu.active {
+      left: 0;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 1;
+      padding: 0;
+    }
+  }
+}
